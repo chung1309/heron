@@ -6,6 +6,7 @@
     "build": "node build.js && tsc --build tsconfig.json",
     "debug": "npm run bdev && nodemon --config nodemon.debug.json",
     "bdev": "node build.js && tsc --build tsconfig.debug.json",
+    "dev": "ts-node src/index",
     "start": "node dist/index.js",
     "test": "jest --updateSnapshot --detectOpenHandles"
   },
@@ -28,6 +29,7 @@
     "@cbidigital/heron-realtime": "^1.0.3",
     "cache-manager": "^3.4.4",
     "cache-manager-ioredis": "^2.1.0",
+    "class-validator": "^0.13.2",
     "express": "^4.17.1",
     "express-handlebars": "^5.3.2",
     "http-status-codes": "^2.1.4",
@@ -37,7 +39,8 @@
     "pg": "^8.6.0",
     "reflect-metadata": "^0.1.13",
     "rxjs": "^7.1.0",
-    "ts-node": "^9.1.1",
+    "socket.io": "^4.4.1",
+    "ts-node": "^10.7.0",
     "tslib": "^2.2.0"
   }
 }
