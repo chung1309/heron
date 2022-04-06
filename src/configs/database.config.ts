@@ -6,13 +6,13 @@ export const MySQLDatabaseConfiguration = {
     config: <CommonDatabaseConfig>{
         host: process.env.MYSQL_HOST || 'localhost',
         port: process.env.MYSQL_PORT || 3306,
-        user: process.env.MYSQL_USER || 'dev',
-        password: process.env.MYSQL_PASSWORD || 'dev@123',
-        database: process.env.MYSQL_DATABASE || 'dev',
+        user: process.env.MYSQL_USER || 'chung',
+        password: process.env.MYSQL_PASSWORD || 'chung123',
+        database: process.env.MYSQL_DATABASE || 'heron',
         pooling: { min: 1, max: 10 },
         driver: DatabaseDriver.MYSQL,
         cluster: {
-            slaves: process.env.MYSQL_SLAVES || 'tcp://localhost:3306?user=dev&password=dev@123&database=dev'
+            slaves: process.env.MYSQL_SLAVES || 'tcp://localhost:3306?user=chung&password=chung123&database=heron'
         }
     }
 };
