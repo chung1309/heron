@@ -1,0 +1,43 @@
+{
+  "name": "heron",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build": "node build.js && tsc --build tsconfig.json",
+    "debug": "npm run bdev && nodemon --config nodemon.debug.json",
+    "bdev": "node build.js && tsc --build tsconfig.debug.json",
+    "start": "node dist/index.js",
+    "test": "jest --updateSnapshot --detectOpenHandles"
+  },
+  "keywords": [],
+  "devDependencies": {
+    "@types/express": "^4.17.13",
+    "@types/node": "^15.3.1",
+    "fs-extra": "^10.0.0",
+    "inversify": "^5.1.1",
+    "jest": "^27.1.0",
+    "nodemon": "^2.0.7",
+    "tsconfig-paths": "^3.9.0",
+    "typescript": "^4.2.4"
+  },
+  "dependencies": {
+    "@cbidigital/heron": "^1.1.2",
+    "@cbidigital/heron-common": "^1.3.1",
+    "@cbidigital/heron-express": "^1.2.1",
+    "@cbidigital/heron-graphql": "^1.0.1",
+    "@cbidigital/heron-realtime": "^1.0.3",
+    "cache-manager": "^3.4.4",
+    "cache-manager-ioredis": "^2.1.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.3.2",
+    "http-status-codes": "^2.1.4",
+    "ioredis": "^4.27.8",
+    "module-alias": "^2.2.2",
+    "mysql": "^2.18.1",
+    "pg": "^8.6.0",
+    "reflect-metadata": "^0.1.13",
+    "rxjs": "^7.1.0",
+    "ts-node": "^9.1.1",
+    "tslib": "^2.2.0"
+  }
+}
