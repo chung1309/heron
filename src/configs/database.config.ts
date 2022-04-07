@@ -14,7 +14,10 @@ export const MySQLDatabaseConfiguration = {
         cluster: {
             slaves: process.env.MYSQL_SLAVES || `tcp://localhost:3306?user=root&password=password&database=deron`
         }
-    }
+    },
+    migrations: {
+        tableName: 'migrations'
+      }
 };
 
 export const PostgresDatabaseConfiguration = {

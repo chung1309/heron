@@ -2,13 +2,13 @@ const fs = require('fs');
 
 module.exports = {
     development: {
-        client: 'postgresql',
+        client: 'mysql',
         connection: {
             host: process.env.DATABASE_HOST || 'localhost',
-            port: process.env.DATABASE_PORT || '5432',
-            database: process.env.DATABASE_SCHEMA || 'test',
-            user: process.env.DATABASE_USER || 'dev',
-            password: process.env.DATABASE_PASSWORD || 'dev@123'
+            port: process.env.DATABASE_PORT || '3306',
+            database: process.env.DATABASE_SCHEMA || 'deron',
+            user: process.env.DATABASE_USER || 'root',
+            password: process.env.DATABASE_PASSWORD || 'password'
         },
         migrations: {
             directory: __dirname + '/migrations/tables',

@@ -13,6 +13,7 @@ import {
     Response,
 } from '@cbidigital/heron-common';
 import { HttpRequest, HttpResponse } from '@cbidigital/heron-express';
+import { StatusCodes } from 'http-status-codes';
 import { from, Observable, of, switchMap, tap } from 'rxjs';
 import { TodoModel, TodoService } from '../../domain';
 // import { CacheHandler, CacheStore } from '@cbidigital/heron/cache';
@@ -83,7 +84,7 @@ export class TodoControllers {
         });
     }
 
-    @Put({ uri: '/:id' })
+    @Put({ uri: '/:id', code: StatusCodes.NO_CONTENT })
     @Guard({ 'roles': ['admin', 'moderator'] })
     public async update(@Param('id') id: number, @Body() body: TodoModel) {
         return {

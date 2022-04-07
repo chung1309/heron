@@ -23,14 +23,14 @@ export interface ITodoRepository {
 @Provider({ token: 'todo.provider', scope: Scope.SINGLETON })
 @UseConfig({test:'ahihi'})
 export class TodoRepository implements ITodoRepository {
-    private readonly _client: Optional<KnexClient>;
+    private readonly _client: KnexClient;
 
     constructor(
         // @DatabaseLookup()
         // private readonly _db2: ModuleDatabase<KnexClient>,
         @DatabaseLookup() private readonly _db: ModuleDatabase<KnexClient>,
     ) {
-        this._client = _db.database();
+        this._client = _db.database()!;
     }
 
     public findAll = async () => {
