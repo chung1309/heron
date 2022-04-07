@@ -21,8 +21,8 @@ export class TestIntervalService {
 
     @OnStart()
     start = async () => {
-        this._logger.info('Total sheep counted :' + this.i);
-        this.i = this.i + 1;
+        // this._logger.info('Total sheep counted :' + this.i);
+        // this.i = this.i + 1;
     };
 }
 

@@ -4,7 +4,6 @@ import { PostgresDatabaseConfiguration } from '../../../../../configs';
 import { AbstractDatabaseClient, AbstractKnexDatabaseClient } from '@cbidigital/heron/database';
 
 @UseConfig(PostgresDatabaseConfiguration)
-@Default()
 export class PostgresDatabase extends AbstractKnexDatabaseClient<KnexClient> {
     constructor() {
         super();
@@ -12,7 +11,6 @@ export class PostgresDatabase extends AbstractKnexDatabaseClient<KnexClient> {
 }
 
 @UseConfig(PostgresDatabaseConfiguration)
-@Default()
 export class CassandraDatabase extends AbstractDatabaseClient<Any> {
     init(): DatabaseConnector<Any> {
         return {

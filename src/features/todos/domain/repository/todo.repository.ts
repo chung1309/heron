@@ -12,7 +12,6 @@ import { KnexClient } from '@cbidigital/heron';
 import { TodoEntity } from '../entity';
 import { StatusCodes } from 'http-status-codes';
 import { MYSQLDatabase } from '../../infra/databases';
-
 export interface ITodoRepository {
     findAll: () => Promise<TodoEntity[]>;
     getById: (id: number) => Promise<TodoEntity | undefined>;
@@ -27,8 +26,8 @@ export class TodoRepository implements ITodoRepository {
     private readonly _client: Optional<KnexClient>;
 
     constructor(
-        @DatabaseLookup(MYSQLDatabase.name)
-        private readonly _db2: ModuleDatabase<KnexClient>,
+        // @DatabaseLookup()
+        // private readonly _db2: ModuleDatabase<KnexClient>,
         @DatabaseLookup() private readonly _db: ModuleDatabase<KnexClient>,
     ) {
         this._client = _db.database();
