@@ -17,7 +17,7 @@ import { from, Observable, of, switchMap, tap } from 'rxjs';
 import { TodoModel, TodoService } from '../../domain';
 // import { CacheHandler, CacheStore } from '@cbidigital/heron/cache';
 
-@Controller('/todos')
+@Controller('/api/todos')
 @Guard({ 'roles': ['admin', 'moderator'] })
 export class TodoControllers {
 //     private readonly _cacheStore?: CacheHandler;
