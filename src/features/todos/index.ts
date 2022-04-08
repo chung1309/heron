@@ -1,10 +1,15 @@
-import { Module } from '@cbidigital/heron-common';
-import { TodoControllers } from './app';
-import { TodoRepository, TodoService } from './domain';
+import {Module} from '@cbidigital/heron-common';
+import {TodoControllers, SpinControllers} from './app';
+import {TodoRepository, TodoService, SpinService, SpinRepository} from './domain';
 
 @Module({
-    controllers: [TodoControllers],
-    providers: [TodoRepository, TodoService]
+  controllers: [TodoControllers, SpinControllers],
+  providers: [
+    TodoRepository,
+    TodoService,
+    SpinService,
+    SpinRepository,
+  ],
 })
 export class TodosModule {
 

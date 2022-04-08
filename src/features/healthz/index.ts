@@ -1,9 +1,9 @@
-import { Module } from '@cbidigital/heron-common';
-import { HealthCheckControllers } from './app/controllers';
-import { EventsControllers } from './events';
+import {Module} from '@cbidigital/heron-common';
+import {HealthCheckControllers} from './app/controllers';
+import {EventsControllers} from './events';
 
 @Module({
-    controllers: [HealthCheckControllers, EventsControllers]
+  controllers: [HealthCheckControllers, EventsControllers],
 })
 export class HealthCheckModule {
 
